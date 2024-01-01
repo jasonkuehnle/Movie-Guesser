@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/main_script.js') }}"></script>
+</head>
+<body>
+    {%if mode == "normal" %}
+    <div id="container">
+        <h1>Normal Mode</h1>
+        <a href="{{ url_for('repeat_mode') }}" title="go to repeat mode">
+            <h4 id="descr">no repeat letters (click for repeat mode)</h4>
+        </a>
+        <div id="gameBlock">
+            <h1 id="displayLetterFinal"></h1>
+            <h1 id="displayLetter"></h1>
+            <button onclick="pickLetterNormal()">Pick Letter</button>
+            <button onclick="endGame()">End Game</button>
+            <div id="player1Block">
+                <h3 id="player1">Player 1: 0</h3>
+                <button id="increment" onclick="incrementPlayer1()">+</button>
+            </div>
+            <div id="player2Block">
+                <h3 id="player2">Player 2: 0</h3>
+                <button id="increment" onclick="incrementPlayer2()">+</button>
+            </div>
+        </div>
+    </div>    
+    {% else %}
+    <div id="container">
+        <h1>Repeat Mode</h1>
+        <a href="{{ url_for('normal_mode') }}" title="go to normal mode">
+            <h4 id="descr">repeat letters allowed (click for normal mode)</h4>
+        </a>
+        <div id="gameBlock">
+            <h1 id="displayLetterFinal"></h1>
+            <h1 id="displayLetter"></h1>
+            <button onclick="pickLetterRepeat()">Pick Letter</button>
+            <button onclick="endGame()">End Game</button>
+            <div id="player1Block">
+                <h3 id="player1">Player 1: 0</h3>
+                <button id="increment" onclick="incrementPlayer1()">+</button>
+            </div>
+            <div id="player2Block">
+                <h3 id="player2">Player 2: 0</h3>
+                <button id="increment" onclick="incrementPlayer2()">+</button>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Copperplate', fantasy;
+    background: url('striped_background.jpg') no-repeat center center fixed;  
+    background-size: cover;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#container {   
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px 30px;
+}
+
+#gameBlock {
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+#descr {
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#displayLetter {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+#displayLetterFinal {
+    margin: 5px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 45px;
+    font-style: italic;
+    color: red;
+}
+
+button {
+    border-radius: 7px;
+    width: 120px;
+    height: 35px;
+    box-shadow: none;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: lightgrey;
+    font-family: 'Copperplate', fantasy;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+#player1Block {
+    display: flex;
+    align-items: center;
+    /* float: left; */
+    margin-left: 0px;
+}
+
+#player2Block {
+    display: flex;
+    align-items: center;
+    /* float: right; */
+    margin-left: 100px;
+}
+
+#increment {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    padding: 0px;
+}
+
+p {
+    font-size: 20px;
+}
+
+@media only screen and (max-width:800px) {
+    br {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/main_script.js') }}"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Movie Guesser</h1>
+        <h2>Rules:</h2>
+        <p>Players will take turns pressing the button, generating a random letter. <br>
+            Once a letter is selected, you have 5 seconds to name a movie starting with that letter. <br>
+            The first player to name a NEW movie (no repeats allowed) earns a point. <br>
+            Players can choose from Normal Mode (letters are not repeated) or Repeat Mode (letters can be repeated). <br>
+        </p>
+
+        <button onclick="normal()">Normal Mode</button>
+        <button onclick="repeat()">Repeat Mode</button>
+
+    </div>
+
+</body>
+</html>
